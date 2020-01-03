@@ -19,11 +19,12 @@ jobs:
     - name: show config (cd)
       run: cd docker && docker-compose -f docker-compose.yml config
     
-    - name: show config (env workaround)
-      run: env $(cat docker/.env) docker-compose -f docker/docker-compose.yml config
     
     - name: show config ("change" cwd via --project-directory)
       run: docker-compose -f docker/docker-compose.yml --project-directory docker config
     
     - name: show config ("change" cwd via --project-directory) via make
       run: make build
+      
+    - name: show config (env workaround)
+      run: env $(cat docker/.env) docker-compose -f docker/docker-compose.yml config
