@@ -24,3 +24,6 @@ jobs:
     
     - name: show config ("change" cwd via --project-directory)
       run: docker-compose -f docker/docker-compose.yml --project-directory docker config
+    
+    - name: show config ("change" cwd via --project-directory) via make
+      run: make build
