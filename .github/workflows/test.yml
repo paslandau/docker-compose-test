@@ -23,4 +23,4 @@ jobs:
       run: env $(cat docker/.env) docker-compose -f docker/docker-compose.yml config
     
     - name: show config ("change" cwd via --project-directory)
-      run: env $(cat docker/.env) docker-compose -f docker/docker-compose.yml --project-directory docker config
+      run: docker-compose -f docker/docker-compose.yml --project-directory docker config
