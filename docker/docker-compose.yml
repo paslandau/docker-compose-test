@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  test:
+    image: docker-compose-test
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        - TEST=${TEST}
